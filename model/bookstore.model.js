@@ -29,7 +29,7 @@ const bookSchema = new mongoose.Schema({
     type: [String],
   },
   image: {
-    type: [String],
+    type: String,
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,

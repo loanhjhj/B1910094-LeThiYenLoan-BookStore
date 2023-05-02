@@ -2,6 +2,7 @@ const authorController = require("../controllers/author.controller");
 
 const router = require("express").Router();
 
+//router author
 router.route("/")
     .post(authorController.addAuthor)
     .get(authorController.getAllAuthors);

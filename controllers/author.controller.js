@@ -1,7 +1,7 @@
 const { Author, Book } = require("../model/bookstore.model");
 
 const authorController = {
-  //ADD AUTHOR
+  //create author
   addAuthor: async (req, res) => {
     try {
       const newAuthor = new Author(req.body);
@@ -12,7 +12,7 @@ const authorController = {
     }
   },
 
-  //GET ALL AUTHORS
+  //get all
   getAllAuthors: async (req, res) => {
     try {
       const authors = await Author.find();
@@ -22,7 +22,7 @@ const authorController = {
     }
   },
 
-  //GET AN AUTHOR
+  //get
   getAnAuthor: async (req, res) => {
     try {
       const author = await Author.findById(req.params.id).populate("books");
@@ -32,7 +32,7 @@ const authorController = {
     }
   },
 
-  //UPDATE AUTHOR
+  //update
   updateAuthor: async (req, res) => {
     try {
       const author = await Author.findById(req.params.id);
@@ -43,7 +43,7 @@ const authorController = {
     }
   },
 
-  //DELETE AUTHOR
+  //delete
   deleteAuthor: async (req, res) => {
     try {
       await Book.updateMany({ author: req.params.id }, { author: null });

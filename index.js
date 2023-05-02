@@ -32,8 +32,6 @@ async function startServer(){
 
   });
 
-
-
     } catch(error){
       console.log("Cannot connect to the database!", error);
       process.exit();
