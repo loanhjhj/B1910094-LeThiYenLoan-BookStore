@@ -8,7 +8,7 @@ const authorController = {
       const savedAuthor = await newAuthor.save();
       res.status(200).json(savedAuthor);
     } catch (err) {
-      res.status(500).json(err); //HTTP REQUEST CODE
+      res.status(500).json(err);
     }
   },
 

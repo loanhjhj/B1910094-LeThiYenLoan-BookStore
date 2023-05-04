@@ -17,8 +17,8 @@ app.use(cors());
 app.use(morgan("common"));
 
 //ROUTES
-app.use("/v1/author", authorRoute);
-app.use("/v1/book", bookRoute);
+app.use("/bookstore/author", authorRoute);
+app.use("/bookstore/book", bookRoute);
 
 async function startServer(){
     try{

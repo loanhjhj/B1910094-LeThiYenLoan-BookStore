@@ -2,7 +2,6 @@ const bookController = require("../controllers/book.controller");
 
 const router = require("express").Router();
 
-//router book
 router.route("/")
     .post(bookController.addABook)
     .get(bookController.getAllBooks);
