@@ -46,6 +46,19 @@ const bookController = {
     }
   },
 
+  
+    //edit
+    editBook: async (req, res) => {
+      try {
+        const book = await Book.findById(req.params.id);
+        res.status(200).json("Edited successfully!");
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+
+
   //delete
   deleteBook: async (req, res) => {
     try {

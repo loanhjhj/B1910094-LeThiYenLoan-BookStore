@@ -43,6 +43,16 @@ const authorController = {
     }
   },
 
+    //edit
+    editAuthor: async (req, res) => {
+      try {
+        const author = await Author.findById(req.params.id);
+        res.status(200).json("Edited successfully!");
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
   //delete
   deleteAuthor: async (req, res) => {
     try {

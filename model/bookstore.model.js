@@ -6,7 +6,7 @@ const authorSchema = new mongoose.Schema({
     required:true
   },
   year: {
-    type: Number,
+    type: String,
     required:true
 },
   books: [
@@ -26,7 +26,7 @@ const bookSchema = new mongoose.Schema({
     type: String,
   },
   genres: {
-    type: [String],
+    type: String,
   },
   image: {
     type: String,
